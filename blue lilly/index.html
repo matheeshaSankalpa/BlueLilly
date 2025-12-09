@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Lilly Naturals | Premium Wellness</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Nunito for rounded, bold text -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#390544',
+                            light: '#f8ddff',
+                            dark: '#2a0431',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8ddff;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8ddff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #390544;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2a0431;
+        }
+
+        /* Glassmorphism for cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 text-brand-purple shadow-lg backdrop-blur-md transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <!-- Logo -->
+                <img src="images/logo.jpg" alt="Logo" class="h-10 w-auto object-contain"> 
+                <span class="text-2xl font-extrabold tracking-wider text-brand-purple">BLUE LILLY</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-bold text-lg">
+                <a href="#home" class="hover:text-brand-dark transition duration-300">Home</a>
+                <a href="#about" class="hover:text-brand-dark transition duration-300">About</a>
+                <a href="#products" class="hover:text-brand-dark transition duration-300">Products</a>
+                <a href="#reviews" class="hover:text-brand-dark transition duration-300">Reviews</a>
+                <a href="#contact" class="hover:text-brand-dark transition duration-300">Visit Us</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-brand-purple focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm text-center py-4">
+            <a href="#home" class="block py-3 text-lg font-semibold hover:bg-brand-light hover:text-brand-purple">Home</a>
+            <a href="#about" class="block py-3 text-lg font-semibold hover:bg-brand-light hover:text-brand-purple">About</a>
+            <a href="#products" class="block py-3 text-lg font-semibold hover:bg-brand-light hover:text-brand-purple">Products</a>
+            <a href="#reviews" class="block py-3 text-lg font-semibold hover:bg-brand-light hover:text-brand-purple">Reviews</a>
+            <a href="#contact" class="block py-3 text-lg font-semibold hover:bg-brand-light hover:text-brand-purple">Contact</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HOME (Hero) -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-brand-light overflow-hidden">
+        <!-- Decorative Blob -->
+        <div class="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] max-w-3xl max-h-3xl -translate-x-1/2 -translate-y-1/2 bg-white/50 rounded-full filter blur-3xl opacity-70"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+                
+                <!-- Left Side: Text Content -->
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <span class="text-brand-purple font-bold tracking-widest uppercase mb-4 block text-shadow">Discover Your Natural Glow</span>
+                    <h1 class="text-5xl md:text-7xl font-black text-brand-purple leading-tight mb-6 text-shadow-lg">
+                        Blue Lilly <br>
+                        <span class="text-brand-dark">Naturals</span>
+                    </h1>
+                    <p class="text-xl text-brand-dark font-semibold max-w-lg mx-auto md:mx-0 leading-relaxed mb-10">
+                        Experience the fusion of ancient wisdom and modern science for a radiant you.
+                    </p>
+                    <a href="#products" class="bg-brand-purple text-white font-bold py-4 px-10 rounded-full shadow-lg hover:bg-brand-dark transition transform hover:scale-105 inline-block">
+                        Explore Products
+                    </a>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-white/70 rounded-full shadow-2xl"></div>
+                        <img src="images/homeImage.png" alt="Blue Lilly Naturals Hero" class="absolute inset-8 w-auto h-auto object-cover rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                
+                <!-- Image Left -->
+                <div class="w-full md:w-1/2 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white transform -rotate-3 hover:rotate-0 transition duration-500">
+                        <img src="images/allProducts.png" alt="About Blue Lilly" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-brand-light/20 -z-10"></div>
+                    </div>
+                </div>
+
+                <!-- Text Right -->
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-black text-brand-purple mb-6 relative inline-block text-shadow">
+                        Our Philosophy
+                        <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-2/3 h-2 bg-brand-light rounded-full"></span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 font-semibold leading-relaxed">
+                        At Blue Lilly Naturals, we fuse ancient Ayurvedic wisdom with modern beauty technology. Inspired by the serene Blue Water Lily, our products are designed to rejuvenate your skin and spirit.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 font-semibold leading-relaxed">
+                        We believe in the power of nature, crafting each product with the purest ingredients for a truly personalized wellness journey.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4 text-center">
+                        <div class="p-4 bg-brand-light rounded-2xl text-center w-36">
+                            <i class="fas fa-leaf text-3xl text-brand-purple mb-2"></i>
+                            <h4 class="font-bold text-brand-purple">100% Natural</h4>
+                        </div>
+                        <div class="p-4 bg-brand-light rounded-2xl text-center w-36">
+                            <i class="fas fa-check-circle text-3xl text-brand-purple mb-2"></i>
+                            <h4 class="font-bold text-brand-purple">Cruelty-Free</h4>
+                        </div>
+                        <div class="p-4 bg-brand-light rounded-2xl text-center w-36">
+                            <i class="fas fa-spa text-3xl text-brand-purple mb-2"></i>
+                            <h4 class="font-bold text-brand-purple">Pure Bliss</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCTS -->
+    <section id="products" class="py-24 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-purple font-bold tracking-widest uppercase">Our Collection</span>
+                <h2 class="text-4xl md:text-5xl font-black text-brand-purple mt-2 text-shadow">Signature Products</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Product Cards -->
+                <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <img src="images/Perfume.jpg" alt="Product Image" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-brand-purple mb-2">Perfume</h3>
+                        <p class="text-2xl font-black text-brand-dark">Men And Women</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <img src="images/scrub.png" alt="Product Image" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-brand-purple mb-2">Scrub</h3>
+                        <p class="text-2xl font-black text-brand-dark">Women</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <img src="images/serum.png" alt="Product Image" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-brand-purple mb-2">Serum</h3>
+                        <p class="text-2xl font-black text-brand-dark">Women</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <img src="images/dayCream.png" alt="Product Image" class="w-full h-48 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-brand-purple mb-2">Day/Night Cream</h3>
+                        <p class="text-2xl font-black text-brand-dark">Men and Women</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-brand-purple text-brand-purple font-bold py-3 px-8 rounded-full hover:bg-brand-purple hover:text-white transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: REVIEWS -->
+    <section id="reviews" class="py-24 bg-brand-dark text-white relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-16 text-brand-gold">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-brand-purple/30 p-8 rounded-3xl border border-brand-light/20 backdrop-blur-sm">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"The Skin Match Pro Hub was a game changer! It recommended the Blue Water Lily Mist, and my skin has never felt better."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="images/mahinda.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Sarah+J&background=random'" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Mahinda Rajapaksha</h5>
+                            <span class="text-sm text-brand-light">Loyal Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-purple/30 p-8 rounded-3xl border border-brand-light/20 backdrop-blur-sm">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"Absolutely love the branding and the store vibe. The products are premium quality. Highly recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="images/anura.jpg" onerror="this.src='https.ui-avatars.com/api/?name=Mike+T&background=random'" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Anura Kumara</h5>
+                            <span class="text-sm text-brand-light">Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-purple/30 p-8 rounded-3xl border border-brand-light/20 backdrop-blur-sm">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-lg italic mb-6">"The Blue Lilly scent is enchanting. It really helps me relax after a long day at work. Fast shipping too."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="images/sajith.jpeg" onerror="this.src='https.ui-avatars.com/api/?name=Emily+R&background=random'" alt="User" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Sajith Premadasa </h5>
+                            <span class="text-sm text-brand-light">New Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GOOGLE MAP -->
+    <section id="contact" class="h-[500px] w-full relative">
+        <!-- Overlay Card -->
+        <div class="absolute top-10 left-6 md:left-20 z-10 bg-white/95 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-sm">
+            <h3 class="text-2xl font-black text-brand-dark mb-4">Visit Our Store</h3>
+            <p class="mb-2 font-bold text-gray-700"><i class="fas fa-map-marker-alt text-brand-purple mr-2"></i> Colombo, Sri Lanka</p>
+            <p class="mb-2 font-bold text-gray-700"><i class="fas fa-phone text-brand-purple mr-2"></i> +94 11 234 5678</p>
+            <p class="mb-4 font-bold text-gray-700"><i class="fas fa-envelope text-brand-purple mr-2"></i> hello@bluelilly.lk</p>
+            <button class="w-full bg-brand-purple text-white font-bold py-2 rounded-xl hover:bg-brand-dark transition">Get Directions</button>
+        </div>
+
+        <!-- Embedded Google Map -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.5858599427!2d79.80832042784792!3d6.921838618768846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1709664425810!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: grayscale(20%) contrast(1.2);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- SECTION 6: FOOTER -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-gold">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                         <img src="images/logo.jpg" alt="Logo" class="h-10 w-auto object-contain onerror-hide">
+                        <span class="text-3xl font-black text-brand-gold">BLUE LILLY</span>
+                    </div>
+                    <p class="text-gray-400 font-bold max-w-sm mb-6">
+                        Crafting personal brands through nature and technology. Experience the future of skincare with our AI-powered Skin Match Pro Hub.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-purple flex items-center justify-center hover:bg-white hover:text-brand-purple transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-purple flex items-center justify-center hover:bg-white hover:text-brand-purple transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-purple flex items-center justify-center hover:bg-white hover:text-brand-purple transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-brand-gold">Quick Links</h4>
+                    <ul class="space-y-3 font-bold text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Shop</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-brand-gold">Stay Updated</h4>
+                    <p class="text-gray-400 font-bold mb-4 text-sm">Subscribe for exclusive offers and wellness tips.</p>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your Email" class="px-4 py-3 rounded-xl bg-brand-purple/20 border border-brand-purple focus:outline-none focus:border-brand-gold text-white font-bold placeholder-gray-500">
+                        <button class="bg-brand-gold text-brand-dark font-black py-3 rounded-xl hover:bg-white transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 font-bold text-sm">
+                <p>&copy; 2024 Blue Lilly Naturals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide images if they fail to load (optional, to keep layout clean)
+        document.querySelectorAll('img.onerror-hide').forEach(img => {
+            img.onerror = function() {
+                this.style.display = 'none';
+            };
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('shadow-xl');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
